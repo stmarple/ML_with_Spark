@@ -16,28 +16,6 @@ except:
     sc.stop()
     sc = SparkContext()
 
-# In[Project Description]
-'''
-   In this project, I will extract all ratings and reviews and predict the ratings based on the words used in the reviews.  I will first split
-   out the ratings such that x < 3 will be labeled as 'bad' or 0, x > 3 will be labeled as 'good' or 1, and 3 will be neutral, which will be filtered out.
-
-   This project will contribute to the project I originally set out to do in my machine learning class, CS767.  In that project, I looked to gather world news
-   by the month and compare sentiment in the news about a particular company and determine whether or not there was an impact on the company's stock price.
-   However, due to the technology issue I dealt with in that project, I had to move on from sentiment.
-
-   I later reviewed this dataset in my database management class, CS779, but due to my lack of performance tuning skills, I was forced to stick with simplistic
-   algorithms in that project.
-
-   Now that I have some skills in higher performance technology, I'm going to try again.  By running this small portion of the larger project, I will
-   learn a critical skill that will allow me to create what I consider to be the more time consuming piece of the puzzle and how to give myself an idea
-   on where to start in the large project.
-
-   I am using this dataset because I am familiar with it and was able to download it free with Kaggle.  Whereas historical news data is quite costly,
-   especially if you are looking for world news over 3 months, which is likely terabytes of data.  It also requires language translation.  US news' is
-   a bit too biased and it is sometimes useful to get a fresh look on how others see American companies.
-
-'''
-
 # In[Functions]
 def createKeyListOfWordsDF(df, column, label):
     if label == 'rating':
